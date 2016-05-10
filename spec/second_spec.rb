@@ -1,8 +1,20 @@
-require 'ruby_intro.rb'
+require 'ruby_second.rb'
+
+describe "trying to write my own" do
+
+  describe "#asdf" do
+    it 'should add asdf to the end of strings' do
+      expect(asdf("BOB")).to eq("BOBasdf")
+      expect(asdf("qwer")).to eq("qwerasdf")
+      expect(asdf("lkjh")).to eq("lkjhasdf")
+    end
+
+  end
+end
 
 describe "BookInStock" do
 
-  it "should be defined" do 
+  it "should be defined" do
     expect { BookInStock }.not_to raise_error
   end
 

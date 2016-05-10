@@ -1,7 +1,12 @@
 # When done, submit this entire file to the autograder.
 
-# Part 1
+def asdf meinString
+  return meinString + "asdf"
+  #return "#{meinString}asdf"
+end
 
+# Part 1
+=begin
 def sum arr
   sum = 0
   arr.each do | n |
@@ -17,7 +22,7 @@ def max_2_sum arr
     return arr[0]
   end
 
-  retval = arr.max(2)[0] + arr.max(2)[1]
+  retval = arr.max(2)[0] + arr.max(2)[1] + 1
 
   return retval
 end
@@ -60,14 +65,26 @@ def binary_multiple_of_4? s
 end
 
 # Part 3
-
+=end
 class BookInStock
 attr_accessor :price
-attr_accessor :isbn
+#attr_accessor :isbn
 
   def initialize(isbn , price)
     raise ArgumentError if (isbn.empty? || price <= 0)
     @isbn = isbn
+    @price = price
+  end
+
+  def isbn
+    return @isbn
+  end
+
+  def isbn=(newIsbn)
+    @isbn = newIsbn
+  end
+
+  def price= price
     @price = price
   end
 
